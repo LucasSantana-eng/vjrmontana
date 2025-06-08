@@ -30,7 +30,7 @@ function adicionarLinha(data, hora, obra, motorista) {
   `;
 
   const mensagem = `Estou na obra: ${obra}`;
-  const numero = "5577991214377"; // Substitua pelo número desejado (com DDI e DDD, sem + ou espaços)
+  const numero = "5575991390207"; // Substitua pelo número desejado (com DDI e DDD, sem + ou espaços)
   const urlWhatsApp = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
   window.open(urlWhatsApp, "_blank");
 
