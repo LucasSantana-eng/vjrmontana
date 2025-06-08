@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro de Obras</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Registro de Obras</h1>
+    <div class="tabs">
+      <button class="tab active" data-tab="registro">Registrar</button>
+      <button class="tab" data-tab="historico">Histórico</button>
+    </div>
+
+    <div id="registro" class="tab-content active">
+      <div class="input-group">
+        <input type="text" id="obraInput" placeholder="Digite o nome da obra" />
+        <button id="adicionarBtn">Adicionar</button>
+        <button id="exportExcel">Exportar Excel</button>
+        <button id="exportPDF">Exportar PDF</button>
+      </div>
+      <div class="filtros">
+        <input type="text" id="filtroObra" placeholder="Filtrar por obra">
+        <input type="date" id="filtroData">
+      </div>
+      <table id="tabela">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Horário</th>
+            <th>Obra</th>
+            <th>Motorista</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div id="historico" class="tab-content">
+      <h2>Histórico</h2>
+      <div id="historicoContainer"></div>
+      <button id="limparHistorico">Limpar Histórico</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
